@@ -13,7 +13,8 @@ export class HomeSpotiComponent implements OnInit {
   ngOnInit() {
     this.conexionService.getElementos().subscribe((val) => {
       this.elementos = val;
-    },(err) => {
+      console.log(val);
+    }, (err) => {
       console.error(err);
     });
   }
