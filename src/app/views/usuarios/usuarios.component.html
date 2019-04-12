@@ -1,0 +1,20 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Email</th>
+      <th scope="col">Tipo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let ele of elements">
+      <tr>
+        <th scope="row">{{ ele.id }}</th>
+        <td>{{ ele.nombre }}</td>
+        <td>{{ ele.email }}</td>
+        <td>{{ ele.tipo }}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

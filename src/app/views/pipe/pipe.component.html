@@ -1,0 +1,97 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Antes Pipe</th>
+      <th scope="col">Pipe</th>
+      <th scope="col">Después Pipe</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ nombre }}</td>
+      <td>upperCase</td>
+      <td>{{ nombre | uppercase }}</td>
+    </tr>
+    <tr>
+      <td>{{ nombre }}</td>
+      <td>slice:3</td>
+      <td>{{ nombre | slice: 3 }}</td>
+    </tr>
+    <tr>
+      <td>{{ nombre }}</td>
+      <td>slice: 0: (nombre.length - 1)</td>
+      <td>{{ nombre | slice: 0:nombre.length - 1 }}</td>
+    </tr>
+
+    <tr>
+      <td>{{ array }}</td>
+      <td>slice:0:3</td>
+      <td>{{ array | slice: 0:3 }}</td>
+    </tr>
+    <tr>
+      <td>{{ number }}</td>
+      <td>number:'1.0-9'</td>
+      <td>{{ number | number: "1.0-9" }}</td>
+    </tr>
+    <tr>
+      <td>{{ percentNumber }}</td>
+      <td>percent:'2.2-4'</td>
+      <td>{{ percentNumber | percent: "2.2-4" }}</td>
+    </tr>
+    <tr>
+      <td>{{ usuario }}</td>
+      <td>json</td>
+      <td>{{ usuario | json }}</td>
+    </tr>
+    <tr>
+      <td>{{ promise }}</td>
+      <td>async</td>
+      <td>{{ promise | async }}</td>
+    </tr>
+    <tr>
+      <td>{{ date }}</td>
+      <td>date</td>
+      <td>{{ date | date }}</td>
+    </tr>
+    <tr>
+      <td>{{ date }}</td>
+      <td>date:'medium'</td>
+      <td>{{ date | date:'medium' }}</td>
+    </tr>
+    <tr>
+      <td>{{ date }}</td>
+      <td>date:'short'</td>
+      <td>{{ date | date:'short' }}</td>
+    </tr>
+    <tr>
+      <td>{{ date }}</td>
+      <td>date:'EEEE - MMMM - dd'</td>
+      <td>{{ date | date:'EEEE - MMMM - dd' }}</td>
+    </tr>
+    <tr>
+      <td>{{ nombreCompleto }}</td>
+      <td>personalizado</td>
+      <td>{{ nombreCompleto | capitalize}}</td>
+    </tr>
+    <tr>
+        <td>{{ contrasenia }}</td>
+        <td>personalizado<button (click)= "cambio()">Cambiar visibilidad</button></td>
+        <td>{{ contrasenia | password:visible}}</td>
+
+      </tr>
+  </tbody>
+</table>
+<ng-container *ngFor="let ele of array | slice:1:3">
+  {{ele}}
+</ng-container>
+<div class="containerJson">
+  <h4>JSON</h4>
+  {{ usuario | json }}
+  <pre>
+  {{ usuario | json }}
+</pre
+  >
+</div>
+
+<h3>Youtube</h3>
+<iframe width="683" height="384" [src]= "video | domSeguro:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
