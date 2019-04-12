@@ -18,6 +18,6 @@ export class ConexionApiService{
     return this.httpClient.get(this.url + 'usuarios');
   }
   getUsuario(id): Observable<any> {
-    return this.httpClient.get(this.url + 'usuarios/'+id);
+    return this.httpClient.get(this.url + 'usuarios/' + id);
   }
 }

@@ -11,8 +11,8 @@ export class UsuariosComponent implements OnInit {
   constructor(private service: ConexionApiService) { }
 
   ngOnInit() {
-    this.service.getUsuarios().subscribe((val)=>{
-      this.elements=val;
+    this.service.getUsuarios().subscribe((val) => {
+      this.elements = val;
     })
   }
 

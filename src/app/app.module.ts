@@ -7,10 +7,8 @@ import { ConexionInterceptorService } from './interceptor/conexion-interceptor.s
 import { NavModule } from './components/nav/nav.module';
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
-import { PasswordPipe } from './pipes/password.pipe';
 
-  // the second parameter 'fr' is optional
-  registerLocaleData(localeEs, 'es');
+registerLocaleData( localeEs, 'es' );
 
 @NgModule({
   declarations: [
